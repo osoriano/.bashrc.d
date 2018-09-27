@@ -30,3 +30,7 @@ function kns() {
     local ns="${1}"
     kubectl config set-context $(kubectl config current-context) --namespace="${ns}"
 }
+
+dip() {
+    docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
+}
