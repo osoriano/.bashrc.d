@@ -9,7 +9,9 @@ alias ppd="popd"
 alias pssh="ssh -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no"
 alias pscp="scp -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no"
 
-alias vi="vim"
+alias vi="vim -O"
+alias vim="vim -O"
+
 alias h="history | less +G"
 
 alias gb="git branch"
