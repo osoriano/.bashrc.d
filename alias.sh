@@ -37,3 +37,10 @@ function kns() {
 dip() {
     docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
+
+gdt() {
+    if [[ "$#" == 0 ]]; then
+        set -- HEAD
+    fi
+    git diff-tree --name-only --no-commit-id -r "$@"
+}
