@@ -23,6 +23,7 @@ alias gd="git diff | less"
 alias gf="git fetch"
 alias gl="git log"
 alias gp="git pull"
+alias gpd="git push -f downstream HEAD:dev"
 alias gpu="git push"
 alias gs="git status"
 
