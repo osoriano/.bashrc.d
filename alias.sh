@@ -25,13 +25,12 @@ alias gd="git diff | less"
 alias gf="git fetch"
 alias gl="git log"
 alias gp="git pull"
-alias gpd="git push -f downstream HEAD:dev"
 alias gpu="git push"
 alias gs="git status"
 
 alias k=kubectl
 
-function kns() {
+kns() {
     local ns="${1}"
     kubectl config set-context $(kubectl config current-context) --namespace="${ns}"
 }
@@ -45,6 +44,14 @@ gdt() {
         set -- HEAD
     fi
     git diff-tree --name-only --no-commit-id -r "$@"
+}
+
+gpd() {
+    if git remote | grep downstream; then
+        git push -f downstream HEAD:dev
+    else
+        git push -f origin HEAD:dev
+    fi
 }
 
 vf() {
