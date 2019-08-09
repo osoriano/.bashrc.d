@@ -45,3 +45,11 @@ gdt() {
     fi
     git diff-tree --name-only --no-commit-id -r "$@"
 }
+
+vf() {
+    vim $(fzf)
+}
+
+vfm() {
+    vim $(fzf -m)
+}
