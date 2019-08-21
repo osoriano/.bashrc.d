@@ -27,6 +27,8 @@ alias gl="git log"
 alias gp="git pull"
 alias gpu="git push"
 alias gs="git status"
+alias ga="git add"
+alias grc="git rebase --continue"
 
 alias k=kubectl
 
