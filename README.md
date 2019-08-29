@@ -5,5 +5,7 @@ Install Guide
 
 2. Source ~/.bashrc.d/bashrc.sh in ~/.bashrc (.i.e. `source ~/.bashrc.d/bashrc.sh`)
 
+3. Source ~/.bashrc.d/profile.sh in ~/.profile or ~/.bash\_profile
+
 
 Enjoy!
