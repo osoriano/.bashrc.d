@@ -1,4 +1,3 @@
-# User specific aliases and functions
 alias la="ls -A"
 alias ll="ls -l"
 alias lal="ls -lA"
@@ -31,35 +30,3 @@ alias ga="git add"
 alias grc="git rebase --continue"
 
 alias k=kubectl
-
-kns() {
-    local ns="${1}"
-    kubectl config set-context $(kubectl config current-context) --namespace="${ns}"
-}
-
-dip() {
-    docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
-}
-
-gdt() {
-    if [[ "$#" == 0 ]]; then
-        set -- HEAD
-    fi
-    git diff-tree --name-only --no-commit-id -r "$@"
-}
-
-gpd() {
-    if git remote | grep downstream; then
-        git push -f downstream HEAD:dev
-    else
-        git push -f origin HEAD:dev
-    fi
-}
-
-vf() {
-    vim $(fzf)
-}
-
-vfm() {
-    vim $(fzf -m)
-}
