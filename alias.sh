@@ -1,6 +1,6 @@
 alias la="ls -A"
-alias ll="ls -l"
-alias lal="ls -lA"
+alias ll="ls -lh"
+alias lal="ls -lAh"
 
 alias pd="pushd"
 alias ppd="popd"
@@ -21,12 +21,13 @@ alias grm="git rebase origin/master"
 alias gch="git checkout"
 alias gco="git clone"
 alias gd="git diff"
-alias gf="git fetch"
+alias gf="git fetch -p --all"
 alias gl="git log"
 alias gp="git pull"
 alias gpu="git push"
 alias gs="git status"
 alias ga="git add"
 alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 alias k=kubectl
