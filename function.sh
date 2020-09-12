@@ -34,3 +34,15 @@ vf() {
 vfm() {
     vim $(fzf -m)
 }
+
+# Format json file using jq
+# See https://github.com/stedolan/jq/issues/105
+jqf() {
+    local jqf_dir="$(mktemp --directory /tmp/jqf-dir-XXXXXXXXX)"
+    for f in "$@"; do
+        local base="$(basename "${f}")"
+        local jqf_file="${jqf_dir}/${base}"
+        cat "${f}" | jq > "${jqf_file}"
+        mv "${jqf_file}" "${f}"
+    done
+}

@@ -18,6 +18,7 @@ alias gb="git branch"
 alias gc="git commit"
 alias gr="git rebase"
 alias grm="git rebase origin/master"
+alias grma="git rebase origin/main"
 alias gch="git checkout"
 alias gco="git clone"
 alias gd="git diff"
@@ -29,5 +30,8 @@ alias gs="git status"
 alias ga="git add"
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
+alias grs="git rebase --skip"
 
 alias k=kubectl
+
+alias standby='while true; do echo -n . && sleep 15; done'
