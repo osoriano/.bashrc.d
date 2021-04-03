@@ -1,6 +1,6 @@
-alias l="ls -lh"
-alias ll="ls -lh"
-alias la="ls -lAh"
+alias l="ls -lhF"
+alias ll="ls -lhF"
+alias la="ls -lAhF"
 
 alias pd="pushd"
 alias ppd="popd"
