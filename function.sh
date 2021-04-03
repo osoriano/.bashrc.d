@@ -47,3 +47,7 @@ jqf() {
     done
     rm --recursive --force "${jqf_dir}"
 }
+
+ycmkill() {
+  kill $(ps auxww | grep YouCompleteMe | grep -v grep | tr -s ' ' | cut -d' ' -f2)
+}
