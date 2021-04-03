@@ -45,4 +45,5 @@ jqf() {
         cat "${f}" | jq > "${jqf_file}"
         mv "${jqf_file}" "${f}"
     done
+    rm --recursive --force "${jqf_dir}"
 }
