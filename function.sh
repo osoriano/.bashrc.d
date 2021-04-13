@@ -73,3 +73,19 @@ docker-volume-cp() {
       cp --archive . /to
       "
 }
+
+# Wait for the port to be open on the
+# specified host
+#
+# See:
+# https://stackoverflow.com/questions/27599839/
+# how-to-wait-for-an-open-port-with-netcat
+function wait_for_port() {
+  local host="$1"
+  local port="$2"
+
+  while ! timeout 2 bash -c "< /dev/tcp/${host}/${port}" > /dev/null 2>&1; do
+      echo "Waiting for ${host}:${port} to start"
+      sleep 1
+  done
+}
