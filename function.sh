@@ -47,3 +47,29 @@ jqf() {
     done
     rm --recursive --force "${jqf_dir}"
 }
+
+# Command for copying a docker volume
+# See https://github.com/gdiepen/docker-convenience-scripts#docker_clone_volumesh
+docker-volume-cp() {
+  if [[ "$#" != 2 ]] || [[ -z "$1" ]] || [[ -z "$2" ]]; then
+    echo "Usage: docker-volume-cp <src> <dst>"
+    return 1
+  fi
+  local src="$1"
+  local dst="$2"
+  docker volume create "${dst}"
+  docker run \
+    --rm \
+    --interactive \
+    --tty \
+    --volume "${src}:/from" \
+    --volume "${dst}:/to" \
+    alpine ash -c "
+      set -o errexit
+      set -o pipefail
+      set -o nounset
+
+      cd /from
+      cp --archive . /to
+      "
+}
