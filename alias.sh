@@ -35,3 +35,5 @@ alias grs="git rebase --skip"
 alias k=kubectl
 
 alias standby='while true; do echo -n . && sleep 15; done'
+
+alias chompifeof="perl -pi -e 'chomp if eof'"
