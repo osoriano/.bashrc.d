@@ -9,6 +9,7 @@ alias pssh="ssh -o PreferredAuthentications=keyboard-interactive,password -o Pub
 alias pscp="scp -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no"
 
 alias v="vim -O"
+alias vc="vim --clean -O"
 alias vi="vim -O"
 alias vim="vim -O"
 
