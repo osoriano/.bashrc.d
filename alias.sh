@@ -35,6 +35,8 @@ alias grs="git rebase --skip"
 
 alias k=kubectl
 
+alias fpstree='pstree -glptsSu'
+
 alias standby='while true; do echo -n . && sleep 15; done'
 
 alias chompifeof="perl -pi -e 'chomp if eof'"
