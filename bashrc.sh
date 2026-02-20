@@ -1,4 +1,4 @@
 set -o vi
 
-source ~/.bashrc.d/alias.sh
-source ~/.bashrc.d/function.sh
+source ~/gh/osoriano/.bashrc.d/alias.sh
+source ~/gh/osoriano/.bashrc.d/function.sh
