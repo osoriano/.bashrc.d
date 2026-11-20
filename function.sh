@@ -35,6 +35,11 @@ vfm() {
     vim $(fzf -m)
 }
 
+# Claude code review shortcut
+cr() {
+  claude "/code-review $*"
+}
+
 # Format json file using jq
 # See https://github.com/stedolan/jq/issues/105
 jqf() {
