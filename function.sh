@@ -40,6 +40,14 @@ cr() {
   claude "/code-review $*"
 }
 
+crm() {
+  claude "/code-review medium $*"
+}
+
+crh() {
+  claude "/code-review high $*"
+}
+
 # Format json file using jq
 # See https://github.com/stedolan/jq/issues/105
 jqf() {
